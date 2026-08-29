@@ -9,7 +9,9 @@ environment.
 ## Lab Environment
 
 | System | Role | IP Address |
+
 | Kali Linux | Security workstation | 192.168.56.101 |
+
 | Ubuntu Server | Target | 192.168.56.103 |
 
 Both systems communicate through a VirtualBox Host-Only network,
