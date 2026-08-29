@@ -2,7 +2,7 @@
 
 ## Objective
 
-The objective of this lab was to practice network reconn and
+The objective of this lab was to practice network recon and
 service enumeration against a target within an isolated VirtualBox 
 environment.
 
