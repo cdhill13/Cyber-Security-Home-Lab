@@ -1,6 +1,6 @@
 # Cyber Security Home Lab
 
-Personal cybersecurity laboratory designed to develop hands-on
+Personal cybersecurity lab designed to develop hands-on
 experience in offensive security, networking, Linux administration,
 and security automation.
 
@@ -26,7 +26,7 @@ and security automation.
 ## Lab Areas
 
 ### Networking
-Network reconnaissance, service enumeration,
+Network recon, service enumeration,
 packet analysis, and TCP/IP fundamentals.
 
 ### Linux
@@ -38,7 +38,7 @@ HTTP analysis, authentication, authorization,
 input validation, and vulnerability assessment.
 
 ### Security Automation
-Python tools developed to automate security-related tasks.
+Python tools developed to automate security related tasks.
 
 ## Methodology
 
