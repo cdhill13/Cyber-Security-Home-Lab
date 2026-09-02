@@ -46,7 +46,6 @@ The target environment is isolated using a VirtualBox Host-Only network. Kali ma
 
 ---
 
-# Completed Labs
 # Cyber Security Home Lab
 
 This is my personal cybersecurity home lab where I’m building hands-on experience with offensive security, networking, Linux, and security automation.
