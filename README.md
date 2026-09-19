@@ -83,7 +83,7 @@ I practiced Linux users and groups, permissions, ownership, processes, services,
 - Basic vulnerability research
 - CVE analysis
 
-**Status:** In Progress
+**Status:** Completed
 ➡️ [View the Linux Security & SSH Enumeration Lab](./2-Linux-Security/README.md)
 
 ---
