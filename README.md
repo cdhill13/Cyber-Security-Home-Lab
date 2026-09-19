@@ -46,88 +46,45 @@ The target environment is isolated using a VirtualBox Host-Only network. Kali ma
 
 ---
 
-# Cyber Security Home Lab
-
-This is my personal cybersecurity home lab where I’m building hands-on experience with offensive security, networking, Linux, and security automation.
-
-I’m using this repository to document the labs I build, the tools I learn, what I find, and what I take away from each project.
-
----
-
-## Objectives
-
-- Build practical penetration testing skills
-- Improve my understanding of networking and TCP/IP
-- Get more comfortable working with Linux
-- Learn web application security
-- Build security tools and automation with Python
-- Practice documenting findings and explaining my process
-
----
-
-## Lab Environment
-
-| System | Role | Setup |
-|---|---|---|
-| Kali Linux | Attacker / Security Workstation | VirtualBox VM |
-| Ubuntu Server | Target | VirtualBox VM |
-| VirtualBox | Virtualization | Host-Only Lab Network |
-
-### Network Setup
-
-    Internet
-       |
-    Kali Linux
-    ├── NAT
-    │   └── Internet Access
-    │
-    └── Host-Only Adapter
-        192.168.56.101
-             |
-             | Private Lab Network
-             |
-        Ubuntu Server
-        192.168.56.103
-
-The Kali and Ubuntu machines communicate through a VirtualBox Host-Only network. This keeps the target separated from my normal network while still allowing Kali to communicate with it.
-
-Kali also has a separate NAT adapter for Internet access.
-
----
-
-# Completed Labs
+# Labs
 
 ## 1. Network Recon
 
-My first lab focused on basic network recon and learning how to identify what a target is exposing to the network.
+My first lab focused on basic network recon inside an isolated VirtualBox environment.
 
-I started by confirming that my Kali machine could communicate with the Ubuntu target. From there, I used Nmap to scan the target, identify open ports, and gather more information about the services running on them.
+I used Nmap to discover open ports, identify the services running on them, perform service/version detection, and verify the target's full TCP port range.
 
-### What I Practiced
-
-- Testing connectivity between machines
+**Main skills practiced:**
+- Host connectivity testing
 - TCP port scanning
-- Network recon
 - Service enumeration
-- Service and version detection
+- Nmap service/version detection
 - Full TCP port scanning
-- Reading and understanding Nmap results
 
-### What I Found
-
-My initial Nmap scan found one open TCP port:
-
-    22/tcp open ssh
-
-I then used service/version detection to get more information about the service running on port 22.
-
-Nmap identified it as OpenSSH running on Ubuntu Linux.
-
-Finally, I scanned all 65,535 TCP ports to make sure there weren’t services running on ports outside of Nmap’s default scan.
-
-The full scan confirmed that SSH was the only open TCP service on the target.
-
+**Status:** Completed
 ➡️ [View the Network Recon Lab](./1-Network-Recon/README.md)
+
+---
+
+## 2. Linux Security & SSH Enumeration
+
+This lab focused on Linux security fundamentals and learning how to gather information about a target both from inside the system and remotely from Kali.
+
+I practiced Linux users and groups, permissions, ownership, processes, services, `sudo`, and systemd. I then treated the Ubuntu server like a black-box target and performed host discovery and SSH enumeration.
+
+**Main skills practiced:**
+- Linux users, groups, and privileges
+- File permissions and ownership
+- Processes and services
+- Host discovery
+- SSH service enumeration
+- SSH authentication enumeration
+- SSH host-key fingerprinting
+- Basic vulnerability research
+- CVE analysis
+
+**Status:** In Progress
+➡️ [View the Linux Security & SSH Enumeration Lab](./2-Linux-Security/README.md)
 
 ---
 
@@ -137,13 +94,13 @@ The full scan confirmed that SSH was the only open TCP service on the target.
 
 Network recon, service enumeration, packet analysis, and TCP/IP fundamentals.
 
-**Status:** In Progress
+**Status:** Completed
 
 ## Linux Security
 
 Linux administration, users and groups, permissions, processes, services, and privilege escalation.
 
-**Status:** Planned
+**Status:** In Progress
 
 ## Web Security
 
@@ -173,6 +130,8 @@ Capturing and analyzing network traffic with Wireshark.
 - Ubuntu Server
 - VirtualBox
 - Nmap
+- OpenSSH / SSH
+- Linux command-line tools
 - Git
 - GitHub
 
@@ -205,17 +164,25 @@ I also keep raw scan results and other useful output so the repository shows bot
 
 # Current Repository Structure
 
-    Cyber-Security-Home-Lab/
-    │
+   Cyber-Security-Home-Lab/
+│
+├── README.md
+│
+├── 1-Network-Recon/
+│   ├── README.md
+│   └── scans/
+│       ├── initial-scan.txt
+│       ├── service-scan.txt
+│       └── full-tcp-scan.txt
+│
+└── 2-Linux-Security/
     ├── README.md
-    │
-    └── 1-Network-Recon/
-        ├── README.md
-        │
-        └── scans/
-            ├── initial-scan.txt
-            ├── service-scan.txt
-            └── full-tcp-scan.txt
+    └── evidence/
+        ├── host-discovery.txt
+        ├── ssh-service-scan.txt
+        ├── ssh-algorithms.txt
+        ├── ssh-auth-methods.txt
+        └── ssh-hostkey-fingerprints.txt
 
 ---
 
