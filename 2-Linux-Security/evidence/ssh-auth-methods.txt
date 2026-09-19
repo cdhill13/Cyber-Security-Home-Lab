@@ -1,0 +1,13 @@
+# Nmap 7.99 scan initiated Sat Sep 19 17:02:47 2026 as: /usr/lib/nmap/nmap --privileged -p 22 --script ssh-auth-methods --script-args=ssh.user=labuser -oN 2-Linux-Security/evidence/ssh-auth-methods.txt 192.168.56.103
+Nmap scan report for 192.168.56.103
+Host is up (0.0031s latency).
+
+PORT   STATE SERVICE
+22/tcp open  ssh
+| ssh-auth-methods: 
+|   Supported authentication methods: 
+|     publickey
+|_    password
+MAC Address: 08:00:27:B2:80:58 (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Sat Sep 19 17:02:48 2026 -- 1 IP address (1 host up) scanned in 1.12 seconds

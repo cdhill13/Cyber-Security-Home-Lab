@@ -1,0 +1,11 @@
+# Nmap 7.99 scan initiated Sat Sep 19 16:59:48 2026 as: /usr/lib/nmap/nmap --privileged -sV -p 22 -oN 2-Linux-Security/evidence/ssh-service-scan.txt 192.168.56.103
+Nmap scan report for 192.168.56.103
+Host is up (0.0011s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 10.2p1 Ubuntu 2ubuntu3.5 (Ubuntu Linux; protocol 2.0)
+MAC Address: 08:00:27:B2:80:58 (Oracle VirtualBox virtual NIC)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Sep 19 16:59:49 2026 -- 1 IP address (1 host up) scanned in 0.87 seconds
